@@ -18,7 +18,18 @@
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://fatmauyar.github.io/home/about/</guid>
-      <description>Biography Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.</description>
+      <description>Biography Experienced researcher in neuroscience with a background in engineering
+Demonstrated history of working with medical data and applied machine learning
+Interested in leveraging analytical expertise and visualization skills towards a Data scientist position</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://fatmauyar.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/home/projects/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -27,6 +38,15 @@
       <pubDate>Wed, 20 Sep 2017 00:00:00 -0400</pubDate>
       
       <guid>https://fatmauyar.github.io/home/skills/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://fatmauyar.github.io/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/home/publications/</guid>
       <description></description>
     </item>
     
@@ -49,29 +69,20 @@
     </item>
     
     <item>
+      <title>Posts</title>
+      <link>https://fatmauyar.github.io/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Recent &amp; Upcoming Talks</title>
       <link>https://fatmauyar.github.io/home/talks/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://fatmauyar.github.io/home/talks/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recent Publications</title>
-      <link>https://fatmauyar.github.io/home/publications/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>https://fatmauyar.github.io/home/publications/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recent Posts</title>
-      <link>https://fatmauyar.github.io/home/posts/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>https://fatmauyar.github.io/home/posts/</guid>
       <description></description>
     </item>
     
@@ -85,11 +96,11 @@
     </item>
     
     <item>
-      <title>Projects</title>
-      <link>https://fatmauyar.github.io/home/projects/</link>
+      <title>Contact</title>
+      <link>https://fatmauyar.github.io/home/contact/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
-      <guid>https://fatmauyar.github.io/home/projects/</guid>
+      <guid>https://fatmauyar.github.io/home/contact/</guid>
       <description></description>
     </item>
     
@@ -110,15 +121,6 @@ I am a teaching instructor for the following courses at University X:
       <pubDate>Wed, 20 Sep 2017 00:00:00 -0400</pubDate>
       
       <guid>https://fatmauyar.github.io/home/tags/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>https://fatmauyar.github.io/home/contact/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>https://fatmauyar.github.io/home/contact/</guid>
       <description></description>
     </item>
     
