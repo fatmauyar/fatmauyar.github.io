@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on </title>
+    <link>https://fatmauyar.github.io/publication/</link>
+    <description>Recent content in Publications on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://fatmauyar.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cardiorespiratory fitness is associated with enhanced hippocampal functional connectivity in healthy young adults</title>
+      <link>https://fatmauyar.github.io/publication/fitnessconnectivity/</link>
+      <pubDate>Thu, 01 Mar 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/fitnessconnectivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A Brain Phenotype for Stressor‐Evoked Blood Pressure Reactivity</title>
+      <link>https://fatmauyar.github.io/publication/cardiovascular/</link>
+      <pubDate>Sat, 01 Jul 2017 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/cardiovascular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Retinotopic information interacts with category selectivity in human ventral cortex</title>
+      <link>https://fatmauyar.github.io/publication/ventralcortex/</link>
+      <pubDate>Tue, 01 Nov 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/ventralcortex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Physical activity is associated with reduced implicit learning but enhanced relational memory and executive functioning in young adults</title>
+      <link>https://fatmauyar.github.io/publication/physicalactivity/</link>
+      <pubDate>Thu, 01 Sep 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/physicalactivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sensory Processing with Varying Degrees of Attention: Lessons from Hemispatial Neglect</title>
+      <link>https://fatmauyar.github.io/publication/hemispatialneglect/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/hemispatialneglect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simulation of Grain Growth Under the Effect of Stress</title>
+      <link>https://fatmauyar.github.io/publication/graingrowth/</link>
+      <pubDate>Sun, 01 Apr 2012 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/graingrowth/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing a Curvature-Driven Moving Finite Element Grain Growth Model with the Generalized 3-D von Neumann Relation</title>
+      <link>https://fatmauyar.github.io/publication/finiteelementgg/</link>
+      <pubDate>Wed, 01 Apr 2009 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/finiteelementgg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing the MacPherson-Srolovitz Theory in Simulations of 3-D Grain Growth</title>
+      <link>https://fatmauyar.github.io/publication/srolovitz/</link>
+      <pubDate>Sat, 01 Mar 2008 00:00:00 -0500</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/srolovitz/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

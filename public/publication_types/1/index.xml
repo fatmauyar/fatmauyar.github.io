@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 on </title>
+    <link>https://fatmauyar.github.io/publication_types/1/</link>
+    <description>Recent content in 1 on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Mon, 01 Jul 2013 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://fatmauyar.github.io/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Sensory Processing with Varying Degrees of Attention: Lessons from Hemispatial Neglect</title>
+      <link>https://fatmauyar.github.io/publication/hemispatialneglect/</link>
+      <pubDate>Mon, 01 Jul 2013 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/hemispatialneglect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing the MacPherson-Srolovitz Theory in Simulations of 3-D Grain Growth</title>
+      <link>https://fatmauyar.github.io/publication/srolovitz/</link>
+      <pubDate>Sat, 01 Mar 2008 00:00:00 -0500</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/srolovitz/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
