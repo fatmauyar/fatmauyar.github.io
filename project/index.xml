@@ -13,6 +13,17 @@
     
     
     <item>
+      <title>Brain Mechanisms Behind Physical Activity and Improved Cognitive Function</title>
+      <link>https://fatmauyar.github.io/project/brain-health/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/project/brain-health/</guid>
+      <description>Created multi-threaded parallel pipeline to analyze brain MRI images across multiple datasets (weight loss, Parkinson’s, childhood obesity); speeding up processing by 800%.
+ Applied statistical mediation analysis to uncover causal links between fitness, aspects of brain health and cognitive function.
+  Techniques: Matlab, FSL, Freesurfer, gnu parallel, SPSS, mediation</description>
+    </item>
+    
+    <item>
       <title>Decoding Brain Patterns for Predicting Heart Disease Risk Markers</title>
       <link>https://fatmauyar.github.io/project/cardiovascular-risk/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
@@ -22,6 +33,20 @@
  Developed PCA-LASSO toolbox to predict cardiovascular risk based on brain activity.
  Co-authored top-tier journal article which received media coverage. Reuters
   Techniques: Matlab, FSL, Freesurfer, gnu parallel, SPSS, mediation, PCA, LASSO</description>
+    </item>
+    
+    <item>
+      <title>Investigating Role of Attentional Modulation on Brain Sensory Signals</title>
+      <link>https://fatmauyar.github.io/project/attention/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://fatmauyar.github.io/project/attention/</guid>
+      <description>*Executed a complete human subject study:
+ Designing experimental protocol including visual psychological tasks,
+ Recruiting stroke patients with visual attention deficits and healthy control subjects
+ Classifying brain activity using various multivariate pattern classifiers ( i.e. SVM)
+ Statistical testing of research hypotheses using SPSS (ANOVA)
+  Techniques : Psychtoolbox, Python, libSVM, BrainVoyager, medical record review, SPSS</description>
     </item>
     
     <item>
