@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 2.4.0">
+  <meta name="generator" content="Hugo 0.48" />
+  <meta name="author" content="Fatma Uyar Morency">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="Amazon User Reviews Sentiment Analysis What was the last thing that you purchased on Amazon? Chances are, if it was not a repeat buy, you read the user reviews before making the purchase decision. Often we look at highest and lowest star reviews to find out about possible issues and hope we too would have that wonderful 5-star experience as well. Good reviews mean good business as they increase confidence in potential buyers.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://fatmauyar.github.io/post/amazonsentiment/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#0095eb">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+  
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-125511510-1', 'auto');
+      
+      ga('require', 'eventTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'urlChangeTracker');
+      ga('send', 'pageview');
+    </script>
+    <script async src="//www.google-analytics.com/analytics.js"></script>
+    
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+    
+  
+  
+
+  
+  <link rel="alternate" href="https://fatmauyar.github.io/index.xml" type="application/rss+xml" title="">
+  <link rel="feed" href="https://fatmauyar.github.io/index.xml" type="application/rss+xml" title="">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://fatmauyar.github.io/post/amazonsentiment/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="">
+  <meta property="og:url" content="https://fatmauyar.github.io/post/amazonsentiment/">
+  <meta property="og:title" content=" | ">
+  <meta property="og:description" content="Amazon User Reviews Sentiment Analysis What was the last thing that you purchased on Amazon? Chances are, if it was not a repeat buy, you read the user reviews before making the purchase decision. Often we look at highest and lowest star reviews to find out about possible issues and hope we too would have that wonderful 5-star experience as well. Good reviews mean good business as they increase confidence in potential buyers.">
+  <meta property="og:locale" content="en-us">
+  
+  
+  
+  
+
+  
+
+  
+
+  <title> | </title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/"></a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Blog</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name"></h1>
+
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Fatma Uyar Morency">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="" itemprop="datePublished">
+    <time datetime="" itemprop="dateModified">
+      Jan 1, 0001
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Fatma Uyar Morency">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    20 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=&amp;url=https%3a%2f%2ffatmauyar.github.io%2fpost%2famazonsentiment%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2ffatmauyar.github.io%2fpost%2famazonsentiment%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2ffatmauyar.github.io%2fpost%2famazonsentiment%2f&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2ffatmauyar.github.io%2fpost%2famazonsentiment%2f&amp;title="
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=&amp;body=https%3a%2f%2ffatmauyar.github.io%2fpost%2famazonsentiment%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="amazon-user-reviews-sentiment-analysis">Amazon User Reviews Sentiment Analysis</h1>
+
+<p>What was the last thing that you purchased on Amazon? Chances are, if it was not a repeat buy, you read the user reviews before making the purchase decision. Often we look at highest and lowest star reviews to find out about possible issues and hope we too would have that wonderful 5-star experience as well. Good reviews mean good business as they increase confidence in potential buyers.</p>
+
+<p>It is vital for companies to track their user reviews to determine polarity of their products. Sentiment analysis [subfield of Natural Language Processing (NLP)] can be used to sift through structured and unstructured text documents and extracting meaning and insights.</p>
+
+<p>In this project, we will identify good and bad reviews from Amazon commerce data downloaded from data.world.
+Using Python <strong>NLTK library</strong> and <strong>Scikit Learn</strong>, we will clean and explore the dataset first, then apply sentiment analysis using bayesian modeling.</p>
+
+<p><a href="explore" target="_blank">Exploratory Data Analysis </a></p>
+
+<p><a href="text" target="_blank">Text Processing </a></p>
+
+<p><a href="sentiment" target="_blank">Sentiment Analysis </a></p>
+
+<p><a href="error" target="_blank">Error Analysis</a></p>
+
+<p>Project Resources: <a href="https://www.udemy.com/python-for-data-science-and-machine-learning-bootcamp/learn/v4/t/lecture/5733564?start=0" target="_blank">Udemy: Python for Data Science and Machine Learning Bootcamp</a><br />
+Project Dataset: <a href="https://data.world/promptcloud/fashion-products-on-amazon-com" target="_blank">Amazon commerce web scraping sample sourced from: Data.world</a><br />
+Yelp review example: <a href="https://medium.com/tensorist/classifying-yelp-reviews-using-nltk-and-scikit-learn-c58e71e962d9" target="_blank">Sentiment Analysis for Yelp reviews</a></p>
+
+<h2 id="exploratory-data-analysis-a-name-explore-a">Exploratory Data Analysis <a name="explore"></a></h2>
+
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+import string
+import re
+
+#visualization
+import seaborn as sns
+import matplotlib.pyplot as plt
+%matplotlib inline
+sns.set(color_codes=True)
+pal = sns.color_palette(&quot;Set2&quot;, 10)
+sns.set_palette(pal)
+</code></pre>
+
+<pre><code class="language-python">df=pd.read_csv('input/amazon_co-ecommerce_sample.csv')
+df.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>uniq_id</th>
+      <th>product_name</th>
+      <th>manufacturer</th>
+      <th>price</th>
+      <th>number_available_in_stock</th>
+      <th>number_of_reviews</th>
+      <th>number_of_answered_questions</th>
+      <th>average_review_rating</th>
+      <th>amazon_category_and_sub_category</th>
+      <th>customers_who_bought_this_item_also_bought</th>
+      <th>description</th>
+      <th>product_information</th>
+      <th>product_description</th>
+      <th>items_customers_buy_after_viewing_this_item</th>
+      <th>customer_questions_and_answers</th>
+      <th>customer_reviews</th>
+      <th>sellers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>eac7efa5dbd3d667f26eb3d3ab504464</td>
+      <td>Hornby 2014 Catalogue</td>
+      <td>Hornby</td>
+      <td>£3.42</td>
+      <td>5 new</td>
+      <td>15</td>
+      <td>1.0</td>
+      <td>4.9 out of 5 stars</td>
+      <td>Hobbies &gt; Model Trains &amp; Railway Sets &gt; Rail V...</td>
+      <td>http://www.amazon.co.uk/Hornby-R8150-Catalogue...</td>
+      <td>Product Description Hornby 2014 Catalogue Box ...</td>
+      <td>Technical Details Item Weight640 g Product Dim...</td>
+      <td>Product Description Hornby 2014 Catalogue Box ...</td>
+      <td>http://www.amazon.co.uk/Hornby-R8150-Catalogue...</td>
+      <td>Does this catalogue detail all the previous Ho...</td>
+      <td>Worth Buying For The Pictures Alone (As Ever) ...</td>
+      <td>{"seller"=&gt;[{"Seller_name_1"=&gt;"Amazon.co.uk", ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>b17540ef7e86e461d37f3ae58b7b72ac</td>
+      <td>FunkyBuys® Large Christmas Holiday Express Fes...</td>
+      <td>FunkyBuys</td>
+      <td>£16.99</td>
+      <td>NaN</td>
+      <td>2</td>
+      <td>1.0</td>
+      <td>4.5 out of 5 stars</td>
+      <td>Hobbies &gt; Model Trains &amp; Railway Sets &gt; Rail V...</td>
+      <td>http://www.amazon.co.uk/Christmas-Holiday-Expr...</td>
+      <td>Size Name:Large FunkyBuys® Large Christmas Hol...</td>
+      <td>Technical Details Manufacturer recommended age...</td>
+      <td>Size Name:Large FunkyBuys® Large Christmas Hol...</td>
+      <td>http://www.amazon.co.uk/Christmas-Holiday-Expr...</td>
+      <td>can you turn off sounds // hi no you cant turn...</td>
+      <td>Four Stars // 4.0 // 18 Dec. 2015 // By\n    \...</td>
+      <td>{"seller"=&gt;{"Seller_name_1"=&gt;"UHD WHOLESALE", ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>348f344247b0c1a935b1223072ef9d8a</td>
+      <td>CLASSIC TOY TRAIN SET TRACK CARRIAGES LIGHT EN...</td>
+      <td>ccf</td>
+      <td>£9.99</td>
+      <td>2 new</td>
+      <td>17</td>
+      <td>2.0</td>
+      <td>3.9 out of 5 stars</td>
+      <td>Hobbies &gt; Model Trains &amp; Railway Sets &gt; Rail V...</td>
+      <td>http://www.amazon.co.uk/Classic-Train-Lights-B...</td>
+      <td>BIG CLASSIC TOY TRAIN SET TRACK CARRIAGE LIGHT...</td>
+      <td>Technical Details Manufacturer recommended age...</td>
+      <td>BIG CLASSIC TOY TRAIN SET TRACK CARRIAGE LIGHT...</td>
+      <td>http://www.amazon.co.uk/Train-With-Tracks-Batt...</td>
+      <td>What is the gauge of the track // Hi Paul.Trut...</td>
+      <td>**Highly Recommended!** // 5.0 // 26 May 2015 ...</td>
+      <td>{"seller"=&gt;[{"Seller_name_1"=&gt;"DEAL-BOX", "Sel...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>e12b92dbb8eaee78b22965d2a9bbbd9f</td>
+      <td>HORNBY Coach R4410A BR Hawksworth Corridor 3rd</td>
+      <td>Hornby</td>
+      <td>£39.99</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>2.0</td>
+      <td>5.0 out of 5 stars</td>
+      <td>Hobbies &gt; Model Trains &amp; Railway Sets &gt; Rail V...</td>
+      <td>NaN</td>
+      <td>Hornby 00 Gauge BR Hawksworth 3rd Class W 2107...</td>
+      <td>Technical Details Item Weight259 g Product Dim...</td>
+      <td>Hornby 00 Gauge BR Hawksworth 3rd Class W 2107...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>I love it // 5.0 // 22 July 2013 // By\n    \n...</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>e33a9adeed5f36840ccc227db4682a36</td>
+      <td>Hornby 00 Gauge 0-4-0 Gildenlow Salt Co. Steam...</td>
+      <td>Hornby</td>
+      <td>£32.19</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>2.0</td>
+      <td>4.7 out of 5 stars</td>
+      <td>Hobbies &gt; Model Trains &amp; Railway Sets &gt; Rail V...</td>
+      <td>http://www.amazon.co.uk/Hornby-R6367-RailRoad-...</td>
+      <td>Product Description Hornby RailRoad 0-4-0 Gild...</td>
+      <td>Technical Details Item Weight159 g Product Dim...</td>
+      <td>Product Description Hornby RailRoad 0-4-0 Gild...</td>
+      <td>http://www.amazon.co.uk/Hornby-R2672-RailRoad-...</td>
+      <td>NaN</td>
+      <td>Birthday present // 5.0 // 14 April 2014 // By...</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">df.shape
+</code></pre>
+
+<pre><code>(10000, 17)
+</code></pre>
+
+<h4 id="exploring-product-manufacturers">Exploring product manufacturers</h4>
+
+<p>The dataset has 10000 rows containing 10000unique products.
+We will explore the manufacturers of these products and their main categories.</p>
+
+<pre><code class="language-python">#Complete list of manufacturers
+df['manufacturer'].value_counts()
+</code></pre>
+
+<pre><code>LEGO                                            171
+Disney                                          167
+Oxford Diecast                                  156
+Playmobil                                       147
+Star Wars                                       120
+Mattel                                          114
+Hasbro                                          110
+The Puppet Company                              109
+MyTinyWorld                                      93
+Corgi                                            90
+Hornby                                           87
+Scalextric                                       76
+Pokémon                                          69
+Schleich                                         68
+Amscan                                           65
+Every-occasion-party-supplies                    62
+Melissa &amp; Doug                                   59
+FunKo                                            59
+Papo                                             58
+Tamiya                                           57
+Ravensburger                                     56
+Bristol Novelties                                53
+Intex                                            52
+Hot Wheels                                       50
+Tobar                                            49
+Revell-Monogram                                  48
+Takara Tomy                                      48
+Q-Workshop                                       47
+Marvel                                           47
+Thomas &amp; Friends                                 47
+                                               ... 
+Medieval Dragon Ride-On                           1
+American Muscle - ERTL Collectibles               1
+License 2 Play Inc                                1
+TreasureTrove Toys                                1
+BuyinCoins                                        1
+Cardinal Industries                               1
+Tekken                                            1
+Maxi Hama                                         1
+Vigid Imaginations                                1
+Magic The Gathering 2013 Core Set Intro Pack      1
+TINKERTOY                                         1
+Paladin                                           1
+Bundle Monster                                    1
+One Direction                                     1
+XCSOURCE                                          1
+Transformers Age of Extinction                    1
+Heinrich Bauer                                    1
+FQ                                                1
+MG                                                1
+Masters                                           1
+Wishtime                                          1
+Blue Exorcist                                     1
+Living Nature                                     1
+Infantastic                                       1
+Fizz Creations Ltd                                1
+Jakobs                                            1
+SpringRC                                          1
+Fresh Metal                                       1
+Big Chief                                         1
+Westland Sea King HC.4                            1
+Name: manufacturer, Length: 2651, dtype: int64
+</code></pre>
+
+<p>There are 2651 manufacturers in the dataset, we can explore the top manufacturers in a pie plot with a pie chart.
+This allows us to see that the products in the dataset are possible in the toy category.</p>
+
+<pre><code class="language-python">## PManufacturers
+import plotly.plotly as py
+import plotly.graph_objs as go
+
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+init_notebook_mode(connected=True)
+
+labels = df['manufacturer'].value_counts().index[0:50]
+values = df['manufacturer'].value_counts().tolist()[0:50]
+
+trace = go.Bar(x=labels, y=values)
+py.iplot([trace])
+</code></pre>
+
+<script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script><script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window._Plotly) {require(['plotly'],function(plotly) {window._Plotly=plotly;});}</script>
+
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~cizbakalim/44.embed" height="525px" width="100%"></iframe>
+
+<h4 id="exploring-product-categories">Exploring product categories</h4>
+
+<pre><code class="language-python">def extract_category(text):
+    category =[]
+    if len(text)&gt;0:
+        category=re.split('\ &gt; ',text)[0]
+    return category
+
+df.loc[:, 'category']=df['amazon_category_and_sub_category'].apply(lambda x: extract_category(str(x)))
+df.category.value_counts()
+
+labels = df['category'].value_counts().index
+values = df['category'].value_counts().tolist()
+
+trace = go.Bar(x=labels, y=values)
+py.iplot([trace])
+</code></pre>
+
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~cizbakalim/46.embed" height="525px" width="100%"></iframe>
+
+<h2 id="text-processing-a-name-text-a">Text processing <a name="text"></a></h2>
+
+<p><strong>Exploring product reviews</strong></p>
+
+<p>The nested user reviews of each product are listed under customer reviews column.</p>
+
+<p>Now, we need to inspect the text data fields inside this customer reviews column to scrape the relevant information for individual reviews.</p>
+
+<pre><code class="language-python">df.customer_reviews[0]
+</code></pre>
+
+<pre><code>&quot;Worth Buying For The Pictures Alone (As Ever) // 4.0 // 6 April 2014 // By\n    \n    Copnovelist\n  \n on 6 April 2014 // Part of the magic for me growing up as a boy was to buy (or be given) the new Hornby catalogue every year, even if it included 90% of the same products as the previous year.  I've still got my old ones dating back to the 70s and 80s somewhere.  These days the catalogue is especially informative in that it tells you the vintage of the rolling stock which is useful if you are dedicating your railway to one particular era and train company. | Amazing detail fabulous photography. // 5.0 // 11 April 2015 // By\n    \n    richard\n  \n on 11 April 2015 // Amazing detail, every credit to the photographer in this book, a worthy reference manual, as well as a sales brochure. even if you only have a passing interest in the hobby you will be transported to another time when we were all younger and in awe of the big trains. | 'Great Purchase' // 5.0 // 23 April 2014 // By\n    \n    Pinkhandbag\n  \n on 23 April 2014 // This was purchased on behalf of my Dad. He is always asking me to look up 00 gauge engines online, so this has been a good buy as he can look at it anytime. Would definitely buy the next one 2015!It arrived quickly and in perfect condition :-) | Great Catalogue // 5.0 // 11 Jun. 2014 // By\n    \n    Gary John Mapson\n  \n on 11 Jun. 2014 // Everything I really needed to see what was on offer from Hornby in the way of trains.  Would not have minded it included an RRP as well though | I collect them all as the glossy pictures are great and it is nice that you can still get ... // 5.0 // 7 Dec. 2014 // By\n    \n    David Baker\n  \n on 7 Dec. 2014 // I collect them all as the glossy pictures are great and it is nice that you can still get catalogs to collect. | Great catalogue // 5.0 // 20 Mar. 2015 // By\n    \n    John A. Day\n  \n on 20 Mar. 2015 // What a great book.  Extremely useful insight to all future christmas presents. | Useful // 5.0 // 7 Oct. 2014 // By\n    \n    T. Davies\n  \n on 7 Oct. 2014 // Useful info for someonelike me starting back into the hobby after many years | hornbys latest catalogue. // 5.0 // 1 Dec. 2014 // By\n    \n    John Butlin\n  \n on 1 Dec. 2014 // A well produced very good quality catalogue.Super quality pictures.&quot;
+</code></pre>
+
+<p>Looks like user reviews for a certain product are split by &lsquo;|&rsquo; character, and within each user review we have review title, rating, review data, by user and review text body all separated by &lsquo;//&rsquo;. Now we can extract these fields by text processing.</p>
+
+<pre><code class="language-python">def process_customer_reviews(text):
+    #separate individual reviews
+    ratings, title, usrname, rev, dates, =[],[],[],[],[]
+    if len(text)&gt;0:
+        #generate list of user reviews per item 
+        listrev=re.split('\|',text) 
+        
+        #split fields of user review
+        lrev=[re.split('\//',x) for x in listrev] 
+        
+        # access fields of user review
+        title=[x[0] for x in lrev]
+        ratings=[x[1] for x in lrev if len(x)==5]
+        dates=[x[2] for x in lrev if len(x)==5]
+        usr=[re.split('[\n]',x[3]) for x in lrev if len(x)==5]
+        usrname=[str.lstrip(x[2]) for x in usr if len(x)&gt;2]  # remove leading spaces
+        rev=[x[4] for x in lrev if len(x)==5]
+        
+    return  pd.Series([ratings,title,usrname,rev,dates])
+
+amz=pd.DataFrame()
+amz[['ratings','titles','usrnames','reviews','dates']]=df['customer_reviews'].apply(lambda x: process_customer_reviews(str(x)))
+</code></pre>
+
+<pre><code class="language-python">amz.head()
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ratings</th>
+      <th>titles</th>
+      <th>usrnames</th>
+      <th>reviews</th>
+      <th>dates</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>[ 4.0 ,  5.0 ,  5.0 ,  5.0 ,  5.0 ,  5.0 ,  5....</td>
+      <td>[Worth Buying For The Pictures Alone (As Ever)...</td>
+      <td>[Copnovelist, richard, Pinkhandbag, Gary John ...</td>
+      <td>[ Part of the magic for me growing up as a boy...</td>
+      <td>[ 6 April 2014 ,  11 April 2015 ,  23 April 20...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>[ 4.0 ,  5.0 ]</td>
+      <td>[Four Stars ,  Five Stars ]</td>
+      <td>[kenneth bell, moosixty]</td>
+      <td>[ Very happy with the communication with funky...</td>
+      <td>[ 18 Dec. 2015 ,  14 Jan. 2016 ]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>[ 5.0 ,  5.0 ,  5.0 ,  1.0 ,  1.0 ,  4.0 ,  5....</td>
+      <td>[**Highly Recommended!** ,  Excellent product ...</td>
+      <td>[Simon.B :-), Trevor, Janet, ann milburn, T. F...</td>
+      <td>[ Simple &amp; GREAT FUN for 5+My nephews face was...</td>
+      <td>[ 26 May 2015 ,  29 Jun. 2014 ,  20 Aug. 2015 ...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>[ 5.0 ]</td>
+      <td>[I love it ]</td>
+      <td>[Lilla Lukacs]</td>
+      <td>[ I love it. Perfect with the earlier ordered ...</td>
+      <td>[ 22 July 2013 ]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>[ 5.0 ,  4.0 ,  5.0 ]</td>
+      <td>[Birthday present ,  john burns ,  Get that st...</td>
+      <td>[Love my Dog, john burns, George A. Nott]</td>
+      <td>[ Bought this for my Grandson's birthday.  He ...</td>
+      <td>[ 14 April 2014 ,  17 Jan. 2014 ,  2 Nov. 2015 ]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Now, we will create a new dataframe where each row only contains a single review, instead of list of review records per item. We will also create a new feature based on review text lenght.</p>
+
+<pre><code class="language-python">reviews = []
+ratings = []
+
+for _, row in amz.iterrows():   
+    for rt in row.ratings:
+        ratings.append(rt)
+        
+    for i in range(len(row.ratings)):
+        reviews.append(row.reviews[i])
+
+amzdf= pd.DataFrame({&quot;rating&quot;: ratings, &quot;review&quot;: reviews})
+
+amzdf['text_length']=amzdf.review.apply(lambda x:len(str(x)))
+
+amzdf['rating']=amzdf['rating'].astype(dtype=np.float64)
+
+amzdf.head(10)
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rating</th>
+      <th>review</th>
+      <th>text_length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4.0</td>
+      <td>Part of the magic for me growing up as a boy ...</td>
+      <td>443</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>5.0</td>
+      <td>Amazing detail, every credit to the photograp...</td>
+      <td>269</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5.0</td>
+      <td>This was purchased on behalf of my Dad. He is...</td>
+      <td>245</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5.0</td>
+      <td>Everything I really needed to see what was on...</td>
+      <td>144</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>I collect them all as the glossy pictures are...</td>
+      <td>112</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5.0</td>
+      <td>What a great book.  Extremely useful insight ...</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>5.0</td>
+      <td>Useful info for someonelike me starting back ...</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>5.0</td>
+      <td>A well produced very good quality catalogue.S...</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>4.0</td>
+      <td>Very happy with the communication with funkyb...</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>5.0</td>
+      <td>Great buy.</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">amzdf.shape
+</code></pre>
+
+<pre><code>(29494, 3)
+</code></pre>
+
+<p>After creating the new dataframe, we now have almost 30K individual reviews organized as single review per row.</p>
+
+<p><strong>What is the number of occurrences for each type of star rating?</strong></p>
+
+<pre><code class="language-python">sns.countplot(x='rating',data=amzdf,palette='rainbow')
+plt.show()
+</code></pre>
+
+<p><img src="output_23_0.png" alt="png" /></p>
+
+<p>Dataset is highly skewed towards 4 and 5 star reviews, this may cause some issues down the line for our analysis.</p>
+
+<p>Next question is if the text length indicative of review rating.</p>
+
+<p><strong>Histograms of text length based off of the review ratings.</strong></p>
+
+<pre><code class="language-python">g = sns.FacetGrid(data=amzdf, col='rating')
+g.map(plt.hist, 'text_length', bins=20)
+plt.show()
+</code></pre>
+
+<p><img src="output_26_0.png" alt="png" /></p>
+
+<p>Distribution of text_length for 1 and 2 star ratings are dwarfed by others.</p>
+
+<h4 id="is-text-lenght-distribution-correlated-with-rating">Is text lenght distribution correlated with rating?</h4>
+
+<pre><code class="language-python">sns.boxplot(x='rating', y='text_length', data=amzdf)
+plt.show()
+</code></pre>
+
+<p><img src="output_29_0.png" alt="png" /></p>
+
+<p>From the plot, looks like the 1-star and 2-star ratings have longer text, but there are many outliers (which can be seen as points above the boxes). Because of this, maybe text length won’t be such a useful feature to consider after all.</p>
+
+<h2 id="sentiment-analysis-a-name-sentiment-a">Sentiment Analysis <a name="sentiment"></a></h2>
+
+<p>** Dependent and independent variables for predicting review polarity **</p>
+
+<p>Since the number of reviews are highly skewed towards 5 star ratings, I will combine 1 and 2 star rewviews into bad reviews and 5 star reviews into good review class.</p>
+
+<p>So our dependent value is class feature, and independent values will be processed review text data.</p>
+
+<pre><code class="language-python">data = amzdf[(amzdf['rating'] == 1) | (amzdf['rating'] == 2) |(amzdf['rating'] == 5)]
+data['class']=data.rating.apply(lambda x: 0 if x &lt;5 else 1 )
+data.shape
+
+data.head()
+</code></pre>
+
+<pre><code>/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:2: SettingWithCopyWarning:
+
+
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+</code></pre>
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>rating</th>
+      <th>review</th>
+      <th>text_length</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>5.0</td>
+      <td>Amazing detail, every credit to the photograp...</td>
+      <td>269</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5.0</td>
+      <td>This was purchased on behalf of my Dad. He is...</td>
+      <td>245</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5.0</td>
+      <td>Everything I really needed to see what was on...</td>
+      <td>144</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>I collect them all as the glossy pictures are...</td>
+      <td>112</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>5.0</td>
+      <td>What a great book.  Extremely useful insight ...</td>
+      <td>80</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 id="creating-a-separate-holdout-set">Creating a separate holdout set</h4>
+
+<p>It is important to create a separate test data to see how to model generalize to new samples.</p>
+
+<p>This can be achieved using Scikit learn library model selection methods.</p>
+
+<pre><code class="language-python">import numpy as np
+np.random.seed(42)
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(data['review'], data['class'], test_size=0.2)
+</code></pre>
+
+<pre><code class="language-python">X_train
+</code></pre>
+
+<pre><code>16148     Very good quality chess. Not too big so ideal...
+5729                     Fake face tattoos - all in order.
+8498      Some of order missing. Ballons i got were all...
+8550           Great balloons and blow up to a great size 
+12700     I love this little chap. It's really soft and...
+21603     This Jigsaw must have more grease than a chip...
+5856      I ordered this for my friend for her daughter...
+188                            Just what I was looking for
+23666     this doll is beautiful, my daughter loves her...
+22383                                 usual Tamiya quality
+18522     Bought these as an extra for my Grandson's 6t...
+23485                                      Beautiful doll.
+20820     Read about this little fella and just had to ...
+12556     Gorgeous plush, looks like it should, and it ...
+2632      I bought this kit many years ago when they st...
+26349     Transformers have sustained appeal with boys ...
+4291      These are high quality stickers that give a p...
+1832      bought as a present for my brother and his wi...
+1741                                             its sand.
+3490      My babies love it. Got this for my 6.5 year o...
+11566     This is great item.  Make fabulous presents a...
+4240      Was a little bit smaller then expected and th...
+19103     great washes out of clothes but takes ages to...
+8356      amazing!! I took them  to toysrus to be infla...
+24041      Fairly robust, unlike a smaller version I have.
+10522                        Another excellent Tamiya kit 
+18667                                            Great fun
+25355     Perfect for my fairy garden, I actually bough...
+11962     A Revell re-issue of a kit first produced by ...
+25421     very pleased with these mangoes I will place ...
+                               ...                        
+252                                                Perfect
+3484                                               Perfect
+23864                                             Awesome 
+24501     my kid loves these little squinkies and this ...
+11265     Ordered two of the pigs. They are very lifeli...
+8311                                       Scary as hell! 
+25525     Well made, will now have to look for video/dv...
+27083     A great purchase, colourful, durable and educ...
+22754     This railway carriage compliments my ho gauge...
+8340                  Lasted ages. Great quality balloons.
+6596                                          Just the job
+6925      In manufacturers packaging but very flimsy, n...
+3101      my 4 year old grandson wont go anywhere witho...
+966       When I saw the picture of Dinky the Duck I th...
+2139      I think that this product is one of the best ...
+10802     loved these - bought for my daughters birthda...
+20730       Brilliant item and very fast delivery Thankyou
+14694         Perfect. Just what i was looking for. Thanks
+18648     My son has been asking me for this beyblade f...
+28479     Great items for early filler for Christmas st...
+5704                         Always a hit with the kids!! 
+21825     My two year-old son adores this puzzle. As wi...
+8142      Fantastic product ,price and service! I will ...
+28685                Fantastic quality and great delivery.
+14594     We had a birthday party  for my 50th birthday...
+15461     Brilliant top trumps. Great fun for older one...
+27964     Not seen this anywhere else so quite unique g...
+7023      Our teenage son has been running and racing r...
+1085      Brilliant dice, but please note these are mea...
+20448                                        Good quality 
+Name: review, Length: 18165, dtype: object
+</code></pre>
+
+<h4 id="preprocessing-the-text-data">Preprocessing the text data</h4>
+
+<p>Using NLTK and string library we will get rid of punctuations, and then lower all words. we will then split the text and remove the ones from stopwords corpus (such as “the”, “a”, “an”, etc.) to limit our features to a more meaningful set.</p>
+
+<pre><code class="language-python">import nltk
+import string
+</code></pre>
+
+<pre><code class="language-python">stopwords = nltk.corpus.stopwords.words('english')
+</code></pre>
+
+<pre><code class="language-python">def clean_text(text):
+    text = &quot;&quot;.join([word.lower() for word in text if word not in string.punctuation])
+    tokens = re.split('\W+', text)
+    text = [word for word in tokens if word not in stopwords]
+    return text
+</code></pre>
+
+<pre><code class="language-python">sample_text=amzdf.review[0]
+print(&quot;Sample text:&quot;)
+print(sample_text)
+</code></pre>
+
+<pre><code>Sample text:
+ Part of the magic for me growing up as a boy was to buy (or be given) the new Hornby catalogue every year, even if it included 90% of the same products as the previous year.  I've still got my old ones dating back to the 70s and 80s somewhere.  These days the catalogue is especially informative in that it tells you the vintage of the rolling stock which is useful if you are dedicating your railway to one particular era and train company. 
+</code></pre>
+
+<pre><code class="language-python">print(clean_text(sample_text))
+</code></pre>
+
+<pre><code>['', 'part', 'magic', 'growing', 'boy', 'buy', 'given', 'new', 'hornby', 'catalogue', 'every', 'year', 'even', 'included', '90', 'products', 'previous', 'year', 'ive', 'still', 'got', 'old', 'ones', 'dating', 'back', '70s', '80s', 'somewhere', 'days', 'catalogue', 'especially', 'informative', 'tells', 'vintage', 'rolling', 'stock', 'useful', 'dedicating', 'railway', 'one', 'particular', 'era', 'train', 'company', '']
+</code></pre>
+
+<p>** Creating a bag of words approach from the dataset **</p>
+
+<p>Classification needs the independent features in a vector format. The simplest way to convert words of text corpus to a vector format is the bag-of-words approach, where each unique word in a text will be represented by one number.</p>
+
+<p>This can be achieved by using CountVectorizer from scikit learn tools.</p>
+
+<pre><code class="language-python">from sklearn.feature_extraction.text import CountVectorizer
+</code></pre>
+
+<pre><code class="language-python">bow_transformer = CountVectorizer(analyzer=clean_text).fit(X_train)
+</code></pre>
+
+<p>It is important to apply the bag-of-word(bow) transformer to only the training data so we are not biasing the performanc on holdout test set.</p>
+
+<p>We can check the size of bag of words and feature names as follows:</p>
+
+<pre><code class="language-python">len(bow_transformer.vocabulary_)
+
+</code></pre>
+
+<pre><code>26076
+</code></pre>
+
+<pre><code class="language-python">print(bow_transformer.get_feature_names()[1000:1010])
+</code></pre>
+
+<pre><code>['acceptably', 'accepted', 'accesories', 'accesorisefashion', 'access', 'accessed', 'accessible', 'accessing', 'accessoires', 'accessories']
+</code></pre>
+
+<p>** Let&rsquo;s see how the bow transformer works on a sample review: **</p>
+
+<pre><code class="language-python">sample_review = X_train[21825]
+sample_review
+</code></pre>
+
+<pre><code>' My two year-old son adores this puzzle. As with all Orchard puzzles there is a lot going on so the pieces are easily differentiated. My son loves counting all the different animals and putting the numbers in order up the tree. It has been a great way for him to become familiar with written numbers and the order they go in. The pieces are large and easy for small hands to put in place and it comes with a poster which is a bonus. '
+</code></pre>
+
+<pre><code class="language-python">bowed_sample_review = bow_transformer.transform([sample_review])
+bowed_sample_review
+</code></pre>
+
+<pre><code>&lt;1x26076 sparse matrix of type '&lt;class 'numpy.int64'&gt;'
+    with 36 stored elements in Compressed Sparse Row format&gt;
+</code></pre>
+
+<p>The bag-of-words transformer will create a sparse matrix that will be populated if the input text contains the ith word from the bag of words or not. We can print the transformed sample review and explore how it was vectorized.</p>
+
+<pre><code class="language-python">print(bowed_sample_review)
+</code></pre>
+
+<pre><code>  (0, 0)    2
+  (0, 1181) 1
+  (0, 1665) 1
+  (0, 2764) 1
+  (0, 3322) 1
+  (0, 5190) 1
+  (0, 5739) 1
+  (0, 6872) 1
+  (0, 6874) 1
+  (0, 7663) 1
+  (0, 7679) 1
+  (0, 8711) 1
+  (0, 10246)    1
+  (0, 10283)    1
+  (0, 10514)    1
+  (0, 10869)    1
+  (0, 13161)    1
+  (0, 13800)    1
+  (0, 13853)    1
+  (0, 15646)    2
+  (0, 16064)    1
+  (0, 16068)    2
+  (0, 17015)    2
+  (0, 17140)    1
+  (0, 17562)    1
+  (0, 18262)    1
+  (0, 18265)    1
+  (0, 18271)    1
+  (0, 18281)    1
+  (0, 21111)    1
+  (0, 21340)    2
+  (0, 23934)    1
+  (0, 24205)    1
+  (0, 25141)    1
+  (0, 25781)    1
+  (0, 25893)    1
+</code></pre>
+
+<pre><code class="language-python">print(bow_transformer.get_feature_names()[13853])
+print(bow_transformer.get_feature_names()[15646])
+print(bow_transformer.get_feature_names()[16068])
+print(bow_transformer.get_feature_names()[17015])
+print(bow_transformer.get_feature_names()[21340])
+</code></pre>
+
+<pre><code>loves
+numbers
+order
+pieces
+son
+</code></pre>
+
+<p>** Transforming training and test datasets **</p>
+
+<pre><code class="language-python">Xtrbow = bow_transformer.transform(X_train)
+Xtestbow = bow_transformer.transform(X_test)
+</code></pre>
+
+<pre><code class="language-python">print('Shape of Sparse Matrix: ', Xtrbow.shape)
+print('Amount of Non-Zero occurrences: ', Xtrbow.nnz)
+
+# Percentage of non-zero values
+density = (100.0 * Xtrbow.nnz / (Xtrbow.shape[0] * Xtrbow.shape[1]))
+print('Density: {}'.format((density)))
+</code></pre>
+
+<pre><code>Shape of Sparse Matrix:  (18165, 26076)
+Amount of Non-Zero occurrences:  332064
+Density: 0.07010442321365394
+</code></pre>
+
+<p>** Training our model **</p>
+
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html" target="_blank">Multinomial Naive Bayes</a> is a specialised version of Naive Bayes designed for text documents.</p>
+
+<p>The distribution is parametrized by vectors $\theta<em>y = (\theta</em>{y1},\ldots,\theta<em>{yn})$ for each class $y$,
+where $n$ is the number of features (in text classification, the size of the vocabulary) and $\theta</em>{yi}$ is the probability $P(x_i \mid y)$ of feature $i$ appearing in a sample belonging to class $y$.</p>
+
+<p>The parameters $\theta_y$ is estimated by a smoothed version of maximum likelihood, i.e. relative frequency counting:</p>
+
+<p>$\hat{\theta}<em>{yi} = \frac{ N</em>{yi} + \alpha}{N_y + \alpha n}$</p>
+
+<p>where $N<em>{yi} = \sum</em>{x \in T} x<em>i$  is the number of times feature $i$ appears in a sample of class $y$ in the training set $T$, and $N</em>{y} = \sum<em>{i=1}^{n} N</em>{yi}$ is the total count of all features for class $y$.</p>
+
+<p>Let’s build a Multinomial Naive Bayes model and fit it to our training set (X_train and y_train).</p>
+
+<pre><code class="language-python">from sklearn.naive_bayes import MultinomialNB
+
+nb = MultinomialNB()
+nb.fit(Xtrbow, y_train)
+</code></pre>
+
+<pre><code>MultinomialNB(alpha=1.0, class_prior=None, fit_prior=True)
+</code></pre>
+
+<pre><code class="language-python">preds = nb.predict(Xtestbow)
+</code></pre>
+
+<h2 id="error-analysis-a-name-error-a">Error Analysis <a name="error"></a></h2>
+
+<pre><code class="language-python">from sklearn.metrics import confusion_matrix, classification_report
+
+print(confusion_matrix(y_test, preds))
+print('\n')
+print(classification_report(y_test, preds))
+</code></pre>
+
+<pre><code>[[  33  205]
+ [   4 4300]]
+
+
+              precision    recall  f1-score   support
+
+           0       0.89      0.14      0.24       238
+           1       0.95      1.00      0.98      4304
+
+   micro avg       0.95      0.95      0.95      4542
+   macro avg       0.92      0.57      0.61      4542
+weighted avg       0.95      0.95      0.94      4542
+</code></pre>
+
+<p>Looking at macro avg value, we see that our model can predict whether a user liked their amazon purchase based on their product review to 92% accuracy.</p>
+
+<p>Since the dataset is highly skewed towards 5-star reviews, our model learned them quite well.
+According to the confusion matrix, only 4 of the 5-star reviews were misclassifed as bad reviews.</p>
+
+<p>** Let&rsquo;s look at missed good reviews!**</p>
+
+<pre><code class="language-python">import numpy as np
+
+y_test = np.asarray(y_test)
+missedgood = np.where((preds==0) &amp; (y_test==1))
+missedgood
+</code></pre>
+
+<pre><code>(array([ 882, 1428, 1509, 4453]),)
+</code></pre>
+
+<pre><code class="language-python">X_test.iloc[1509]
+</code></pre>
+
+<pre><code>&quot; Excellent model in perfect condition from reputeable amazon seller, however it was returned for a refund because it's couplings were not compatable with my other Railjet coaches. I was previously ignorant of the fact that Roco Railjet coaches with internal lighting do not have the same couplings as those without. Roco Railjet coaches 64722 / 64723 / 64724 have internal lighting powered through connections in the couplings.&quot;
+</code></pre>
+
+<p>In this case the user states that the purchased model is in perfect condition, but possibly since the review includes the word &ldquo;refund&rdquo;, our classifier marks it as bad review.</p>
+
+<p>** Let&rsquo;s look bad reviews that were able to classified even with the data bias! **</p>
+
+<pre><code class="language-python">foundbad = np.where((y_test == preds) &amp; (y_test==0))
+foundbad
+</code></pre>
+
+<pre><code>(array([ 720,  822,  845,  914,  943, 1225, 1508, 1811, 1826, 1908, 2096,
+        2111, 2112, 2274, 2378, 2538, 2585, 2743, 2853, 2868, 2937, 3074,
+        3087, 3225, 3246, 3263, 3359, 3421, 3554, 3689, 4141, 4469, 4492]),)
+</code></pre>
+
+<pre><code class="language-python">X_test.iloc[845]
+</code></pre>
+
+<pre><code>&quot; Absolutely rubbish. Looks nothing like it does in the images provided. The banner itself it of a poor quality and the writing is squashed together. Also there are gaps where the ink has not taken. Severely disappointed. I know it's low priced but the quality is no where near to the standard shown on the images. &quot;
+</code></pre>
+
+<p>In conclusion, although our model was a little biased towards positive reviews, it was fairly accurate with its predictions, achieving an accuracy of 92% on the test set.</p>
+
+    </div>
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+
+    
+    <p class="powered-by">
+      <a href="https://fatmauyar.github.io/privacy/">Privacy Policy</a>
+    </p>
+    
+
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    <script src="/js/search.js"></script>
+    
+
+    
+    
+
+  </body>
+</html>
+

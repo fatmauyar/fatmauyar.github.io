@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>2 on </title>
+    <title>2 on Fatma Uyar Morency</title>
     <link>https://fatmauyar.github.io/publication_types/2/</link>
-    <description>Recent content in 2 on </description>
+    <description>Recent content in 2 on Fatma Uyar Morency</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 01 Mar 2018 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://fatmauyar.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Associations between cardiorespiratory fitness, physical activity, intraindividual variability in behavior, and cingulate cortex in younger adults</title>
+      <link>https://fatmauyar.github.io/publication/fitness/</link>
+      <pubDate>Fri, 01 Mar 2019 00:00:00 -0500</pubDate>
+      
+      <guid>https://fatmauyar.github.io/publication/fitness/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cardiorespiratory fitness is associated with enhanced hippocampal functional connectivity in healthy young adults</title>

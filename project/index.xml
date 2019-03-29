@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on </title>
+    <title>Projects on Fatma Uyar Morency</title>
     <link>https://fatmauyar.github.io/project/</link>
-    <description>Recent content in Projects on </description>
+    <description>Recent content in Projects on Fatma Uyar Morency</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
@@ -29,19 +29,16 @@
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://fatmauyar.github.io/project/cardiovascular-risk/</guid>
-      <description>Delivered brain phenotype for peripheral blood pressure reactivity. [Github]
- Developed PCA-LASSO toolbox to predict cardiovascular risk based on brain activity.
- Co-authored top-tier journal article which received media coverage. Reuters
-  Techniques: Matlab, FSL, Freesurfer, gnu parallel, SPSS, mediation, PCA, LASSO</description>
+      <description>I used machine learning to predict cardiovascular risk factor ie. blood pressure variability based on brain data as subjects performed stressful tasks inside fMRI scanner. People with a tendency to exhibit exaggerated blood pressure reactions to psychological stressors are at risk for hypertension, adverse clinical cardiovascular events, and premature cardiovascular mortality. Exaggerated blood pressure reactions to psychological stressors may be determined, in part, by a “brain phenotype” that is characterized by reliable neural activity changes in brain areas that regulate cardiovascular physiology during stressful experiences.</description>
     </item>
     
     <item>
-      <title>Investigating Role of Attentional Modulation on Brain Sensory Signals</title>
+      <title>SVM classification of visual cortex neural data from attention-blind stroke patients </title>
       <link>https://fatmauyar.github.io/project/attention/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://fatmauyar.github.io/project/attention/</guid>
-      <description>*Executed a complete human subject study:
+      <description>Executed a complete human subject study:
  Designing experimental protocol including visual psychological tasks,
  Recruiting stroke patients with visual attention deficits and healthy control subjects
  Classifying brain activity using various multivariate pattern classifiers ( i.e. SVM)
